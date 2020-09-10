@@ -34,12 +34,14 @@ endsnippet
 
 snippet trcc "Typescript React Class Component" b
 import React, { Component } from 'react';
-import styles from './${2:$1}.css';
+import styles from './$1.css';
 
 interface Props {
+	${3}
 }
 
 interface State {
+	${4}
 }
 
 class ${1:`!v expand('%:t:r')`} extends Component<Props, State> {
@@ -51,7 +53,7 @@ class ${1:`!v expand('%:t:r')`} extends Component<Props, State> {
 	render() {
 		return (
 			<div>
-				$3
+				${2}
 			</div>
 		);
 	}
@@ -62,16 +64,16 @@ endsnippet
 
 snippet trfc "React Typescript Functional Component" b
 import React from 'react';
-import './${2:$1}.css';
+import './$1.css';
 
 interface Props {
 }
 
-const ${1:`!v expand('%:t:r')`}: React.FC<Props> = ({ $3 }) => {
+const ${1:`!v expand('%:t:r')`}: React.FC<Props> = ({ ${2} }) => {
 	return (
-		<${5:div}>
-			$0
-		</$5>
+		<${3:div}>
+			${4}
+		</$3>
 	);
 }
 

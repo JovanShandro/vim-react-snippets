@@ -1,4 +1,4 @@
-snippet rrcc "React Redux Class Component" b
+snippet mrrcc "React Redux Class Component" b
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styles from './${2:$1}.css';
@@ -25,7 +25,7 @@ function mapStateToProps(state) {
 export default connect(mapStateToProps)($1);
 endsnippet
 
-snippet rcc "Typescript React Class Component" b
+snippet mrcc "Typescript React Class Component" b
 import React, { Component } from 'react';
 import styles from './${2:$1}.css';
 
@@ -47,7 +47,7 @@ class ${1:`!v expand('%:t:r')`} extends Component {
 export default $1;
 endsnippet
 
-snippet rfc "React Typescript Functional Component" b
+snippet mrfc "React Typescript Functional Component" b
 import React from 'react';
 import './${2:$1}.css';
 
